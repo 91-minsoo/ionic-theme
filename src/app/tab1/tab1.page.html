@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu($event)">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Theme Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>theme</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon name="moon" slot="start"></ion-icon>
+      <ion-label>
+        DARK MODE
+      </ion-label>
+      <ion-toggle color="success" (ionChange)="onThemeChange($event)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="onClickActionSheet()">action-sheet</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        alert
+      </ion-label>
+      <ion-button color="primary" (click)="onClickAlert('input')">input</ion-button>
+      <ion-button color="success" (click)="onClickAlert('radio')">
+        <ion-icon name="star"></ion-icon>radio</ion-button>
+      <ion-button (click)="onClickAlert('check')">checkbox</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="onClickLoading()">onClickLoading</ion-button>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button>fab</ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>1</ion-fab-button>
+      <ion-fab-button>2</ion-fab-button>
+      <ion-fab-button>3</ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button>4</ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

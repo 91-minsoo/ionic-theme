@@ -1,0 +1,717 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root.dark-mode {
+  --ion-color-primary: #2657ad;
+  --ion-color-primary-rgb: 87, 108, 168;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #214d98;
+  --ion-color-primary-tint: #3c68b5;
+
+  // --ion-color-primary: #247ba0;
+  // --ion-color-primary-rgb: 87, 108, 168;
+  // --ion-color-primary-contrast: #ffffff;
+  // --ion-color-primary-contrast-rgb: 255, 255, 255;
+  // --ion-color-primary-shade: #206c8d;
+  // --ion-color-primary-tint: #3a88aa;
+
+  --ion-color-secondary: #098f9e;
+  --ion-color-secondary-rgb: 78, 128, 152;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #087e8b;
+  --ion-color-secondary-tint: #229aa8;
+
+  --ion-color-tertiary: #4d2fad;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #442998;
+  --ion-color-tertiary-tint: #5f44b5;
+
+  --ion-color-success: #214e34;
+  --ion-color-success-rgb: 126, 161, 107;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #1d452e;
+  --ion-color-success-tint: #376048;
+
+  --ion-color-warning: #ad8c00;
+  --ion-color-warning-rgb: 227, 227, 106;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #987b00;
+  --ion-color-warning-tint: #b5981a;
+
+  --ion-color-danger: #f25f5c;
+  --ion-color-danger-rgb: 163, 59, 32;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d55451;
+  --ion-color-danger-tint: #f36f6c;
+
+  // --ion-color-danger: #bf4342;
+  // --ion-color-danger-rgb: 163, 59, 32;
+  // --ion-color-danger-contrast: #ffffff;
+  // --ion-color-danger-contrast-rgb: 255, 255, 255;
+  // --ion-color-danger-shade: #a83b3a;
+  // --ion-color-danger-tint: #c55655;
+
+  --ion-color-dark: #f5f3f5;
+  --ion-color-dark-rgb: 245, 243, 245;
+  --ion-color-dark-contrast: #000000;
+  --ion-color-dark-contrast-rgb: 0, 0, 0;
+  --ion-color-dark-shade: #d8d6d8;
+  --ion-color-dark-tint: #f6f4f6;
+
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  --ion-color-light: #1E1E1E;
+  --ion-color-light-rgb: 30, 30, 30;
+  --ion-color-light-contrast: #fc4848;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
+  --ion-color-light-shade: #1a1a1a;
+  --ion-color-light-tint: #353535;
+
+  // text
+  --ion-text-color: #e5e5e5;
+  --ion-text-color-rgb: 229, 229, 229;
+
+  // ionic content
+  ion-action-sheet {
+    /*
+      --background	Background of the action sheet group
+      --background-activated	Background of the activated action sheet button
+      --background-selected	Background of the selected action sheet button
+      --color	Color of the action sheet text
+      --height	height of the action sheet
+      --max-height	Maximum height of the action sheet
+      --max-width	Maximum width of the action sheet
+      --min-height	Minimum height of the action sheet
+      --min-width	Minimum width of the action sheet
+      --width	Width of the action sheet
+    */
+
+    --background: var(--ion-color-light-shade);
+    --background-selected: var(--ion-color-light, #000);
+    --color: var(--ion-text-color);
+  }
+
+  ion-alert {
+    /*
+      --background	Background of the alert
+      --height	Height of the alert
+      --max-height	Maximum height of the alert
+      --max-width	Maximum width of the alert
+      --min-height	Minimum height of the alert
+      --min-width	Minimum width of the alert
+      --width	Width of the alert
+    */
+    --background: var(--ion-color-light-shade);
+
+    // 아래부분은 버전 업데이트에 따라 작동이 안될 수 도 있음
+    // ios
+    .alert-input.sc-ion-alert-ios, /* inputbox background */
+    .alert-checkbox-icon.sc-ion-alert-ios /* checkbox background */ {
+      --ion-background-color: var(--ion-color-light-shade);
+    }
+
+    .alert-checkbox-inner.sc-ion-alert-ios /* checkbox checked icon color*/ {
+      --ion-background-color: var(--ion-color-dark);
+    }
+    
+    // android
+    .alert-radio-label.sc-ion-alert-md, /* radio label color*/
+    .alert-checkbox-label.sc-ion-alert-md /* checkbox label color */ {
+      --ion-color-step-850: var(--ion-color-dark-shade);
+    }
+  }
+
+  ion-badge:not([color]) {
+    /*
+      --background	Background of the badge
+      --color	Text color of the badge
+      --padding-bottom	Padding bottom of the badge
+      --padding-end	Padding end of the badge
+      --padding-start	Padding start of the badge
+      --padding-top	Padding top of the badge
+    */
+  }
+
+  ion-button:not([color]) {
+    /*
+      --background	Background of the button
+      --background-activated	Background of the button when activated
+      --background-focused	Background of the button when focused
+      --border-color	Border color of the button
+      --border-radius	Border radius of the button
+      --border-style	Border style of the button
+      --border-width	Border width of the button
+      --box-shadow	Box shadow of the button
+      --color	Text color of the button
+      --color-activated	Text color of the button when activated
+      --color-focused	Text color of the button when focused
+      --opacity	Opacity of the button
+      --padding-bottom	Padding bottom of the button
+      --padding-end	Padding end of the button
+      --padding-start	Padding start of the button
+      --padding-top	Padding top of the button
+      --ripple-color	Color of the button ripple effect
+      --transition	Transition of the button
+    */
+  }
+
+  ion-card {
+    /*
+      --background	Background of the card
+      --color	Color of the card
+    */
+    -webkit-box-shadow: 0 4px 16px rgba(255, 255, 255, .12);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, .12);
+
+    ion-card-title {
+      /*
+        --color	Color of the card title
+      */
+    }
+  }
+
+  ion-checkbox[color] {
+    /*
+      --background	Background of the checkbox icon
+      --background-checked	Background of the checkbox icon when checked
+      --border-color	Border color of the checkbox icon
+      --border-color-checked	Border color of the checkbox icon when checked
+      --border-radius	Border radius of the checkbox icon
+      --border-style	Border style of the checkbox icon
+      --border-width	Border width of the checkbox icon
+      --checkmark-color	Color of the checkbox checkmark when checked
+      --size	Size of the checkbox icon
+      --transition	Transition of the checkbox icon
+    */
+
+    --border-color: var(--ion-color-dark);
+  }
+
+  ion-checkbox:not([color]) {
+    /*
+      --background	Background of the checkbox icon
+      --background-checked	Background of the checkbox icon when checked
+      --border-color	Border color of the checkbox icon
+      --border-color-checked	Border color of the checkbox icon when checked
+      --border-radius	Border radius of the checkbox icon
+      --border-style	Border style of the checkbox icon
+      --border-width	Border width of the checkbox icon
+      --checkmark-color	Color of the checkbox checkmark when checked
+      --size	Size of the checkbox icon
+      --transition	Transition of the checkbox icon
+    */
+
+    --border-color: var(--ion-color-dark);
+  }
+
+  ion-chip:not([color]) {
+    /*
+      --background	Background of the chip
+      --color	Color of the chip
+    */
+
+    // 아래부분은 버전 업데이트에 따라 작동이 안될 수 도 있음
+    ion-icon:not([color]) {
+      color: rgba(255, 255, 255, .54);
+    };
+  }
+
+  ion-content {
+    /*
+      --background	Background of the Content
+      --color	Color of the Content
+      --keyboard-offset	Keyboard offset of the Content
+      --offset-bottom	Offset bottom of the Content
+      --offset-top	Offset top of the Content
+      --padding-bottom	Padding bottom of the Content
+      --padding-end	Padding end of the Content
+      --padding-start	Padding start of the Content
+      --padding-top	Padding top of the Content
+    */
+    --ion-background-color: var(--ion-color-light-shade, #000);
+    --background: var(--ion-color-light-shade);
+    --color: var(--ion-text-color, #000);
+  }
+
+  ion-content.outer-content {
+    --ion-background-color: var(--ion-color-light-shade, #000);
+    --background: var(--ion-color-light-shade);
+    --color: var(--ion-text-color, #000);
+  }
+
+  ion-datetime {
+    /*
+      --padding-bottom	Padding bottom of the datetime
+      --padding-end	Padding end of the datetime
+      --padding-start	Padding start of the datetime
+      --padding-top	Padding top of the datetime
+      --placeholder-color	Color of the datetime placeholder
+    */
+  }
+
+  ion-picker {
+    /*
+      --background	Background of the picker
+      --background-rgb	Background of the picker in rgb format
+      --border-color	Border color of the picker
+      --border-radius	Border radius of the picker
+      --border-style	Border style of the picker
+      --border-width	Border width of the picker
+      --height	Height of the picker
+      --max-height	Maximum height of the picker
+      --max-width	Maximum width of the picker
+      --min-height	Minimum height of the picker
+      --min-width	Minimum width of the picker
+      --width	Width of the picker
+    */
+    --background: var(--ion-color-light);
+    --background-rgb: var(--ion-color-light-rgb);
+    --border-color: var(--ion-color-light-shade);
+  }
+
+  ion-fab-button {
+    /*
+      --background	Background of the button
+      --background-activated	Background of the button when activated
+      --background-focused	Background of the button when focused
+      --border-color	Border color of the button
+      --border-radius	Border radius of the button
+      --border-style	Border style of the button
+      --border-width	Border width of the button
+      --box-shadow	Box shadow of the button
+      --color	Text color of the button
+      --color-activated	Text color of the button when activated
+      --color-focused	Text color of the button when focused
+      --padding-bottom	Padding bottom of the button
+      --padding-end	Padding end of the button
+      --padding-start	Padding start of the button
+      --padding-top	Padding top of the button
+      --ripple-color	Color of the button ripple effect
+      --transition	Transition of the button
+    */
+  }
+
+  ion-input {
+    /*
+      --background	Background of the input
+      --color	Color of the input text
+      --padding-bottom	Bottom padding of the input
+      --padding-end	End padding of the input
+      --padding-start	Start padding of the input
+      --padding-top	Top padding of the input
+      --placeholder-color	Color of the input placeholder text
+      --placeholder-font-style	Font style of the input placeholder text
+      --placeholder-font-weight	Font weight of the input placeholder text
+      --placeholder-opacity	Opacity of the input placeholder text
+    */
+
+    --background-color: var(--ion-color-light);
+  }
+
+  ion-textarea {
+    /*
+      --background	Background of the textarea
+      --border-radius	Border radius of the textarea
+      --color	Color of the text
+      --padding-bottom	Bottom padding of the textarea
+      --padding-end	End padding of the textarea
+      --padding-start	Start padding of the textarea
+      --padding-top	Top padding of the textarea
+      --placeholder-color	Color of the placeholder text
+      --placeholder-font-style	Style of the placeholder text
+      --placeholder-font-weight	Weight of the placeholder text
+      --placeholder-opacity	Opacity of the placeholder text
+    */
+  }
+
+  ion-item {
+    /*
+      --background	Background of the item
+      --background-activated	Background of the activated item
+      --border-color	Color of the item border
+      --border-radius	Radius of the item border
+      --border-style	Style of the item border
+      --border-width	Width of the item border
+      --box-shadow	Box shadow of the item
+      --color	Color of the item
+      --detail-icon-color	Color of the item detail icon
+      --detail-icon-font-size	Font size of the item detail icon
+      --detail-icon-opacity	Opacity of the item detail icon
+      --highlight-color-focused	The color of the highlight on the item when focused
+      --highlight-color-invalid	The color of the highlight on the item when invalid
+      --highlight-color-valid	The color of the highlight on the item when valid
+      --highlight-height	The height of the highlight on the item
+      --inner-border-width	Width of the item inner border
+      --inner-box-shadow	Box shadow of the item inner
+      --inner-padding-bottom	Bottom padding of the item inner
+      --inner-padding-end	End padding of the item inner
+      --inner-padding-start	Start padding of the item inner
+      --inner-padding-top	Top padding of the item inner
+      --min-height	Minimum height of the item
+      --padding-bottom	Bottom padding of the item
+      --padding-end	End padding of the item
+      --padding-start	Start padding of the item
+      --padding-top	Top padding of the item
+      --ripple-color	Color of the item ripple effect
+      --transition	Transition of the item
+    */
+    --background: var(--ion-color-light-shade);
+    --color: var(--ion-text-color);
+    --border-color: var(--ion-color-light);
+
+    // --ion-item-background-activated: var(--ion-color-light-shade);
+    // --ion-item-background-color-active: var(--ion-color-light-shade);
+  }
+
+  ion-item-divider {
+    /*
+      --background	Background of the item divider
+      --color	Color of the item divider
+      --padding-bottom	Bottom padding of the item divider
+      --padding-end	End padding of the item divider
+      --padding-start	Start padding of the item divider
+      --padding-top	Top padding of the item divider
+    */
+  }
+
+  ion-item-option:not([color]) {
+    /*
+      --background	Background of the item option
+      --color	Color of the item option
+    */
+    --color: var(--ion-text-color);
+  }
+
+  ion-label:not([color]) {
+    /*
+      --color	Color of the label
+    */
+    --color: var(--ion-text-color);
+  }
+
+  ion-note:not([color]) {
+    /*
+      --color	Color of the note
+    */
+    --color: var(--ion-text-color);
+  }
+
+  ion-list-header:not([color]) {
+    /*
+      --background	Background of the list header
+      --color	Color of the list header text
+    */
+    --background: var(--ion-color-light);
+    --color: var(--ion-text-color);
+  }
+
+  ion-menu {
+    /*
+      --background	Background of the menu
+      --height	Height of the menu
+      --max-height	Maximum height of the menu
+      --max-width	Maximum width of the menu
+      --min-height	Minimum height of the menu
+      --min-width	Minimum width of the menu
+      --width	Width of the menu
+    */
+    ion-menu-button {
+      /*
+        --color	Color of the menu button
+        --padding-bottom	Padding bottom of the button
+        --padding-end	Padding end of the button
+        --padding-start	Padding start of the button
+        --padding-top	Padding top of the button
+      */
+    }
+  }
+  
+  ion-loading {
+    /*
+      --background	Background of the loading dialog
+      --height	Height of the loading dialog
+      --max-height	Maximum height of the loading dialog
+      --max-width	Maximum width of the loading dialog
+      --min-height	Minimum height of the loading dialog
+      --min-width	Minimum width of the loading dialog
+      --spinner-color	Color of the loading spinner
+      --width	Width of the loading dialog
+    */
+
+    --background: var(--ion-color-medium);
+    --ion-text-color: #000;
+  }
+
+  ion-progress-bar {
+    /*
+      --background	Same as --buffer-background when using a determinate progress bar, otherwise it styles the background of the ion-progress-bar itself.
+      --buffer-background	Color of the buffer bar
+      --progress-background	Color of the progress bar
+    */
+  }
+
+  ion-skeleton-text {
+    /*
+      --background	Background of the skeleton text
+      --background-rgb	Background of the skeleton text in rgb format
+      --border-radius	Border radius of the skeleton text
+    */
+  }
+
+  ion-spinner:not([color]) {
+    /*
+      --color	Color of the spinner
+    */
+  }
+
+  ion-radio:not([color]) {
+    /*
+      --color	Color of the radio
+      --color-checked	Color of the checked radio
+    */
+    --color: var(--ion-text-color);
+  }
+
+  ion-range:not([color]), ion-range.ios {
+    /*
+      --bar-background	Background of the range bar
+      --bar-background-active	Background of the active range bar
+      --bar-border-radius	Border radius of the range bar
+      --bar-height	Height of the range bar
+      --height	Height of the range
+      --knob-background	Background of the range knob
+      --knob-border-radius	Border radius of the range knob
+      --knob-box-shadow	Box shadow of the range knob
+      --knob-size	Size of the range knob
+    */
+    --knob-background: var(--ion-color-dark);
+  }
+
+  ion-searchbar:not([color]) {
+    /*
+      --background	Background of the searchbar
+      --cancel-button-color	Color of the searchbar cancel button
+      --clear-button-color	Color of the searchbar clear button
+      --color	Color of the searchbar text
+      --icon-color	Color of the searchbar icon
+      --placeholder-color	Color of the searchbar placeholder
+      --placeholder-font-style	Font style of the searchbar placeholder
+      --placeholder-font-weight	Font weight of the searchbar placeholder
+      --placeholder-opacity	Opacity of the searchbar placeholder
+    */
+  }
+
+  ion-segment:not([color]) {
+    ion-segment-button {
+      /*
+        --background	Background of the segment button
+        --background-activated	Background of the activated (pressed) segment button
+        --background-checked	Background of the checked segment button
+        --background-hover	Background of the segment button on hover
+        --border-color	Color of the segment button border
+        --border-radius	Radius of the segment button border
+        --border-style	Style of the segment button border
+        --border-width	Width of the segment button border
+        --color	Color of the segment button
+        --color-activated	Color of the activated segment button
+        --color-checked	Color of the checked segment button
+        --color-checked-disabled	Color of the checked & disabled segment button
+        --color-disabled	Color of the disabled segment button
+        --indicator-color	Color of the indicator (highlight) under the segment button
+        --indicator-color-checked	Color of the indicator (highlight) under the checked segment button
+        --margin-bottom	Bottom margin of the segment button
+        --margin-end	End margin of the segment button
+        --margin-start	Start margin of the segment button
+        --margin-top	Top margin of the segment button
+        --padding-bottom	Bottom padding of the segment button
+        --padding-end	End padding of the segment button
+        --padding-start	Start padding of the segment button
+        --padding-top	Top padding of the segment button
+        --transition	Transition of the segment button
+      */
+    }
+  }
+
+  ion-slides {
+    /*
+      --bullet-background	Background of the pagination bullets
+      --bullet-background-active	Background of the active pagination bullet
+    */
+  }
+
+  // toolbar
+  ion-toolbar {
+    /*
+      --background	Background of the toolbar
+      --border-color	Color of the toolbar border
+      --border-style	Style of the toolbar border
+      --border-width	Width of the toolbar border
+      --color	Color of the toolbar text
+      --min-height	Minimum height of the toolbar
+      --opacity	Opacity of the toolbar background
+      --padding-bottom	Bottom padding of the toolbar
+      --padding-end	End padding of the toolbar
+      --padding-start	Start padding of the toolbar
+      --padding-top	Top padding of the toolbar
+    */
+    --background: var(--ion-color-light);
+    --color: var(--ion-text-color);
+
+    ion-title {
+      /*
+        --color	Text color of the title
+      */
+    }
+
+    ion-back-button {
+      /*
+        --background	Background of the button
+        --border-radius	Border radius of the button
+        --color	Text color of the button
+        --icon-font-size	Font size of the button icon
+        --icon-font-weight	Font weight of the button icon
+        --icon-margin-bottom	Margin bottom of the button icon
+        --icon-margin-end	Margin end of the button icon
+        --icon-margin-start	Margin start of the button icon
+        --icon-margin-top	Margin top of the button icon
+        --icon-padding-bottom	Padding bottom of the button icon
+        --icon-padding-end	Padding end of the button icon
+        --icon-padding-start	Padding start of the button icon
+        --icon-padding-top	Padding top of the button icon
+        --margin-bottom	Margin bottom of the button
+        --margin-end	Margin end of the button
+        --margin-start	Margin start of the button
+        --margin-top	Margin top of the button
+        --min-height	Minimum height of the button
+        --min-width	Minimum width of the button
+        --opacity	Opacity of the button
+        --padding-bottom	Padding bottom of the button
+        --padding-end	Padding end of the button
+        --padding-start	Padding start of the button
+        --padding-top	Padding top of the button
+        --ripple-color	Color of the button ripple effect
+        --transition	Transition of the button
+      */
+    }
+  }
+
+  // ion-tab-bar
+  ion-tab-bar {
+    /*
+      --background	Background of the tab bar
+      --border	Border of the tab bar
+      --color	Color of the tab bar
+    */
+    --background: var(--ion-color-light);
+    --border: rgba(0, 0, 0, 0.07);
+    --color: var(--ion-text-color);
+
+    ion-tab-button {
+      /*
+        --background	Background of the tab button
+        --background-focused	Background of the focused tab button
+        --color	Color of the tab button
+        --color-selected	Color of the selected tab button
+        --padding-bottom	Bottom padding of the tab button
+        --padding-end	End padding of the tab button
+        --padding-start	Start padding of the tab button
+        --padding-top	Top padding of the tab button
+        --ripple-color	Color of the button ripple effect
+      */
+
+      --color-selected: var(--ion-color-primary);
+    }
+  }
+  
+  ion-toast {
+    /*
+      --background	Background of the toast
+      --border-color	Border color of the toast
+      --border-radius	Border radius of the toast
+      --border-style	Border style of the toast
+      --border-width	Border width of the toast
+      --box-shadow	Box shadow of the toast
+      --button-color	Color of the button text
+      --color	Color of the toast text
+      --end	Position from the end
+      --height	Height of the toast
+      --max-height	Maximum height of the toast
+      --max-width	Maximum width of the toast
+      --min-height	Minimum height of the toast
+      --min-width	Minimum width of the toast
+      --start	Position from the start
+      --width	Width of the toast
+    */
+    --background: var(--ion-color-light);
+    --color: var(--ion-text-color);
+  }
+
+  ion-toggle {
+    /*
+      --background	Background of the toggle
+      --background-checked	Background of the toggle when checked
+      --handle-background	Background of the toggle handle
+      --handle-background-checked	Background of the toggle handle when checked
+    */
+
+    --handle-background: var(--ion-color-dark);
+    --handle-background-checked: var(--ion-color-dark);
+  }
+
+  ion-icon:not([color]) {
+    --color: var(--ion-text-color);
+    // --ion-text-color-rgb: 255, 255, 255;
+  }
+
+  ion-anchor:not([color]) {
+    /*
+      --background	Background of the badge
+      --color	Text color of the badge
+    */
+  }
+
+  ion-modal {
+    /*
+      --background	Background of the modal content
+      --border-color	Border color of the modal content
+      --border-radius	Border radius of the modal content
+      --border-style	Border style of the modal content
+      --border-width	Border width of the modal content
+      --height	Height of the modal
+      --max-height	Maximum height of the modal
+      --max-width	Maximum width of the modal
+      --min-height	Minimum height of the modal
+      --min-width	Minimum width of the modal
+      --width	Width of the modal
+    */
+  }
+
+  ion-popover {
+    /*
+      --background	Background of the popover
+      --box-shadow	Box shadow of the popover
+      --height	Height of the popover
+      --max-height	Maximum height of the popover
+      --max-width	Maximum width of the popover
+      --min-height	Minimum height of the popover
+      --min-width	Minimum width of the popover
+      --width	Width of the popover
+    */
+  }
+
+}
+
+
